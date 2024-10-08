@@ -9,9 +9,11 @@ import ggs.srr.oauth.client.ClientManager;
 import ggs.srr.oauth.provider.ProviderManager;
 import jakarta.servlet.Filter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class WebConfig {
@@ -53,4 +55,8 @@ public class WebConfig {
         return filterRegistrationBean;
     }
 
+    @Bean
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
+        return builder.build();
+    }
 }

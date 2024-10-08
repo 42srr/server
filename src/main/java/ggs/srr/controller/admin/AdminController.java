@@ -32,4 +32,5 @@ public class AdminController {
         initDataManager.initData(token);
         return "init user data";
     }
+    
 }

@@ -98,7 +98,7 @@ public class InitDataManager {
                 ProjectUser projectUser = new ProjectUser();
                 projectUser.initUser(resUser);
                 projectUser.initProject(project.getProject());
-                projectUser.initStatus(project.getStatus());
+                //projectUser.initStatus(project.getStatus());
                 projectUserService.save(projectUser);
             }
         }

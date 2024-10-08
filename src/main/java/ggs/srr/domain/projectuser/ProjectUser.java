@@ -23,7 +23,6 @@ public class ProjectUser {
     @JoinColumn(name = "project_id")
     private Project project;
 
-
     public void initUser (FtUser user) {
         this.user = user;
         user.getProjectUsers().add(this);
@@ -32,9 +31,5 @@ public class ProjectUser {
     public void initProject(Project project) {
         this.project = project;
         project.getProjectUsers().add(this);
-    }
-
-    public void initStatus(String status) {
-        this.status = status;
     }
 }
